@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendation</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body id="content">
+	<div class="results">
+	    <center>
+	      <h2 id="name" class="text-uppercase">{{title}}</h2>
+	    </center>
+	</div>
+	<br>
+
+<div id="mycontent">
+    <div id="mcontent">
+      <div class="poster-lg">
+         <p>
+        <iframe style="border-radius: 40px;margin-left: 90px;" width="560" height="315" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+       <div>
+  <br> <iframe src="https://www.yt-download.org/api/button/mp3/{{video_id}}" width="100%" height="100px" scrolling="no" style="border:none;"></iframe></br>
+      </div>
+      </div>
+    
+      <div id="details">
+        <br/>
+        <h6 id="title" style="color:Red;">TITLE: &nbsp;{{title}}</h6>
+        <h6 id="likes" style="color:Red;">likes: &nbsp;{{likes}}</h6>
+        <h6 id="dislikes" style="color:Red;">dislike: &nbsp;{{dislikes}}</h6>
+        <h6 id="ppubllisheddate" style="color:Red;">RELEASE DATE: &nbsp;{{publlisheddate}}</h6>
+        <h6 id="views" style="color:Red;">views: &nbsp;{{views}}</h6>
+        <h6 id="status" style="color:Red;">STATUS: &nbsp;{{rmndlist1[1]}}</h6>
+      </div>
+    </div>
+</div>
+<br/>
+
+<section id="grid">
+<aside class="grid">
+<div>
+ <h style="color:#000000;height:250px ; width:20%">RECOMMENDATION:1</h1>
+
+        <div id="details">
+        <br/>
+        <div style="height:250px ; width:20% ; float:left">
+        <div class="poster-lg">
+         <p>
+        <iframe  src="https://i.ytimg.com/vi/{{rmndlist1[1]}}/mqdefault.jpg" width="250px" height="250px"></iframe>
+      </p>
+      </div>
+    
+      <div style="height:250px ; width:80% ; background-color:#ffffff;float:left ">
+        <h6 id="title" style="color:#000000;">TITLE: &nbsp;{{rmndlist1[0]}}</h6>
+        <h6 id="likes" style="color:#000000;">likes: &nbsp;{{rmndlist1[1]}}</h6>
+        <h6 id="dislikes" style="color:#000000;">dislike: &nbsp;{{rmndlist1[2]}}</h6>
+        <h6 id="ppubllisheddate" style="color:#000000;">RELEASE DATE: &nbsp;{{rmndlist1[3]}}</h6>
+        <h6 id="views" style="color:#000000;">views: &nbsp;{{rmndlist1[4]}}</h6>
+        <h6 id="status" style="color:#000000;">STATUS: &nbsp;{{rmndlist1[5]}}</h6>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<div>
+    </div>
+  </div>
+  </aside>
+  </section>
+ <section id="grid">
+<aside class="grid">
+  <h style="color:#000000;height:250px ; width:20% ">RECOMMENDATION:2</h1>
+
+        <div id="details">
+        <br/>
+        <div style="height:250px ; width:20% ; float:left">
+        <div class="poster-lg">
+         <p>
+        <iframe  src="https://i.ytimg.com/vi/{{rmndlist2[1]}}/mqdefault.jpg" width="250px" height="250px"></iframe>
+      </p>
+      </div>
+    
+      <div style="height:250px ; width:80% ; background-color:#ffffff;float:left ">
+        <h6 id="title" style="color:#000000;">TITLE: &nbsp;{{rmndlist2[0]}}</h6>
+        <h6 id="likes" style="color:#000000;">likes: &nbsp;{{rmndlist2[1]}}</h6>
+        <h6 id="dislikes" style="color:#000000;">dislike: &nbsp;{{rmndlist2[2]}}</h6>
+        <h6 id="ppubllisheddate" style="color:#000000;">RELEASE DATE: &nbsp;{{rmndlist2[3]}}</h6>
+        <h6 id="views" style="color:#000000;">views: &nbsp;{{rmndlist2[4]}}</h6>
+        <h6 id="status" style="color:#000000;">STATUS: &nbsp;{{rmndlist2[5]}}</h6>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<div>
+    </div>
+  </div>
+  </aside>
+  </section>
+  <section id="grid">
+<aside class="grid">
+ <h style="color:#000000;height:250px ; width:20% ">RECOMMENDATION:3</h1>
+
+        <div id="details">
+        <br/>
+        <div style="height:250px ; width:20% ; float:left">
+        <div class="poster-lg">
+         <p>
+        <iframe  src="https://i.ytimg.com/vi/{{rmndlist3[1]}}/mqdefault.jpg" width="250px" height="250px"></iframe>
+      </p>
+      </div>
+    
+      <div style="height:250px ; width:80% ; background-color:#ffffff;float:left ">
+        <h6 id="title" style="color:#000000;">TITLE: &nbsp;{{rmndlist3[0]}}</h6>
+        <h6 id="likes" style="color:#000000;">likes: &nbsp;{{rmndlist3[1]}}</h6>
+        <h6 id="dislikes" style="color:#000000;">dislike: &nbsp;{{rmndlist3[2]}}</h6>
+        <h6 id="ppubllisheddate" style="color:#000000;">RELEASE DATE: &nbsp;{{rmndlist3[3]}}</h6>
+        <h6 id="views" style="color:#000000;">views: &nbsp;{{rmndlist3[4]}}</h6>
+        <h6 id="status" style="color:#000000;">STATUS: &nbsp;{{rmndlist3[5]}}</h6>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<div>
+    </div>
+  </div>
+  </aside>
+  </section>
+  <section id="grid">
+<aside class="grid">
+   <h style="color:#000000;height:250px ; width:20% ">RECOMMENDATION:4</h1>
+
+        <div id="details">
+        <br/>
+        <div style="height:250px ; width:20% ; float:left">
+        <div class="poster-lg">
+         <p>
+        <iframe  src="https://i.ytimg.com/vi/{{rmndlist4[1]}}/mqdefault.jpg" width="250px" height="250px"></iframe>
+      </p>
+      </div>
+    
+      <div style="height:250px ; width:80% ; background-color:#ffffff;float:left ">
+        <h6 id="title" style="color:#000000;">TITLE: &nbsp;{{rmndlist4[0]}}</h6>
+        <h6 id="likes" style="color:#000000;">likes: &nbsp;{{rmndlist4[1]}}</h6>
+        <h6 id="dislikes" style="color:#000000;">dislike: &nbsp;{{rmndlist4[2]}}</h6>
+        <h6 id="ppubllisheddate" style="color:#000000;">RELEASE DATE: &nbsp;{{rmndlist4[3]}}</h6>
+        <h6 id="views" style="color:#000000;">views: &nbsp;{{rmndlist4[4]}}</h6>
+        <h6 id="status" style="color:#000000;">STATUS: &nbsp;{{rmndlist4[5]}}</h6>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<div>
+    </div>
+  </div>
+  </aside>
+  </section>
+  <section id="grid">
+<aside class="grid">
+    <h style="color:#000000;height:250px ; width:20% ">RECOMMENDATION:5</h1> 
+
+        <div id="details">
+        <br/>
+        <div style="height:250px ; width:20% ; float:left">
+        <div class="poster-lg">
+         <p>
+        <iframe  src="https://i.ytimg.com/vi/{{rmndlist5[1]}}/mqdefault.jpg" width="250px" height="250px"></iframe>
+      </p>
+      </div>
+    
+      <div style="height:250px ; width:80% ; background-color:#ffffff;float:left ">
+        <h6 id="title" style="color:#000000;">TITLE: &nbsp;{{rmndlist5[0]}}</h6>
+        <h6 id="likes" style="color:#000000;">likes: &nbsp;{{rmndlist5[1]}}</h6>
+        <h6 id="dislikes" style="color:#000000;">dislike: &nbsp;{{rmndlist5[2]}}</h6>
+        <h6 id="ppubllisheddate" style="color:#000000;">RELEASE DATE: &nbsp;{{rmndlist5[3]}}</h6>
+        <h6 id="views" style="color:#000000;">views: &nbsp;{{rmndlist5[4]}}</h6>
+        <h6 id="status" style="color:#000000;">STATUS: &nbsp;{{rmndlist5[5]}}</h6>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<div>
+    </div>
+  </div>
+  </aside>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='recommend.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
